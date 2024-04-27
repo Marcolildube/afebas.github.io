@@ -257,6 +257,7 @@ Header Style
 */
 .header_img{
   position: absolute;
+  height: 25vw;
 }
 .background-header {
   background-color: black !important;
@@ -636,7 +637,7 @@ Banner Style
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 225px 0px;
+  padding: 220px 0px;
 }
 
 .main-banner .caption h6 {
@@ -650,10 +651,8 @@ Banner Style
 .main-banner .caption h2 {
   font-size: 48px;
   color: #fff;
-  margin-top: 200px;
+  margin-top: 10vw;
   position: relative;
-  padding-bottom: 5px;
-  margin-bottom: 40px;
 }
 
 
@@ -739,6 +738,36 @@ Banner Style
   text-align: center;
   line-height: 100px;
 }
+
+
+.sponsor-banner {
+  margin: auto;
+  width: 100%; /* Largeur du bandeau */
+  overflow: hidden; /* Cache les éléments qui dépassent */
+  white-space: nowrap; /* Empêche les éléments de passer à la ligne */
+}
+
+.sponsor-container {
+  display: inline-block; /* Permet d'afficher les éléments en ligne */
+  animation: scroll 15s linear infinite; /* Animation de défilement continu */
+}
+
+.sponsor-container img {
+  width: 100px; /* Largeur fixe pour les logos de sponsors */
+  height: auto; /* Hauteur automatique pour conserver le ratio d'aspect */
+  margin: 0 10px; /* Espacement horizontal entre les logos */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Début du défilement - aucune translation */
+  }
+  100% {
+    transform: translateX(calc(-100% - 10px)); /* Fin du défilement - déplacer l'ensemble des logos d'une largeur d'image */
+  }
+}
+
+
 
 
 
@@ -1854,4 +1883,65 @@ th {
   100% {
     transform: translateX(-100%); /* Fin du défilement - déplacer l'ensemble des images d'une largeur d'image */
   }
+}
+
+.slider-container {
+  text-align: center;
+  align-items: center;
+  width: 80%; /* Largeur du conteneur du slider */
+  margin: 0 auto; /* Centre le conteneur horizontalement */
+  border-bottom: 4px double #0FEBD4;
+   border-top: 4px double #0FEBD4;
+}
+.slider-container h2{
+  padding: 20px;
+
+}
+
+.slide {
+  width: 90%; /* Largeur de chaque slide */
+  display: none; /* Cache les slides par défaut */
+  margin: 0 auto; /* Centre le slide horizontalement */
+}
+
+.slide.active {
+  display: block; /* Affiche le slide actif */
+}
+
+.slide img {
+  width: 30%; /* Largeur de l'image dans chaque slide */
+  height: auto; /* Hauteur automatique pour conserver le ratio d'aspect */
+  margin-bottom: 10px; /* Espacement en bas de l'image */
+}
+
+.slide button {
+  display: block; /* Affiche le bouton en bloc pour une meilleure présentation */
+  margin: 0 auto 10px; /* Centre le bouton horizontalement et ajoute un espacement en bas */
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(0); /* Début de l'animation - pas de translation */
+  }
+  50% {
+    transform: translateY(-5px); /* À mi-chemin de l'animation - translation vers le haut */
+  }
+  100% {
+    transform: translateY(0); /* Fin de l'animation - retour à la position d'origine */
+  }
+}
+
+.slide button {
+  /* Styles de base */
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: levitate 2s infinite; /* Animation en boucle pendant 2 secondes */
+}
+.slide p{
+  color: white;
 }
