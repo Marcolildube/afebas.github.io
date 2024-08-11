@@ -2,12 +2,12 @@
 <html lang="en">
 
   <head>
-
+    <link rel="icon" type="image/png" href="assets/images/434984082_664231352458191_5826590618460124006_n - Copie.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>federation billard</title>
+    <title>AFEBAS</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -15,15 +15,13 @@
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 <!--
 
-TemplateMo 589 lugx gaming
 
-https://templatemo.com/tm-589-lugx-gaming
 
 -->
   </head>
@@ -80,7 +78,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="col-lg-6 align-self-center">
           <div class="caption header-text">
             
-            <h2>AFEBAS Madagascar <br> et La réunion  </h2>
+            <h2>AFEBAS Madagascar <br> et La Réunion  </h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to </p>
           </div>
         </div>
@@ -99,8 +97,9 @@ https://templatemo.com/tm-589-lugx-gaming
     <div class="introduction">
       <h2>Introduction</h2>
       <div class="introduction-content">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-        <p>Plus de texte...</p>
+        <p>Le 8 pool coeur de l'océan Indien et une association affilié et déclaré au ministère des sports en France 
+On a deux branches une à la Réunion et une autre à Madagascar</p>
+      
       </div>
     </div>
   </div>
@@ -153,8 +152,15 @@ https://templatemo.com/tm-589-lugx-gaming
   </div>
 </div>
 
-  <div class="announcement-container">
+<div class="announcement-container">
     <h1>Annonces</h1>
+  <select id="paysFiltre">
+    <option value="madagascar">Madagascar</option>
+    <option value="reunion">La Réunion</option>
+  </select>
+
+<div class="annonce madagascar">
+  <h2>Madagascar</h2>
     <div class="matches-container">
       <h2 class="details-title" id="matches-title">Résultats des matchs <span class="arrow">&#9660;</span></h2>
       <div class="matches details" id="matches-details">
@@ -217,6 +223,74 @@ https://templatemo.com/tm-589-lugx-gaming
     </div>
   </div>
 
+
+<div class="annonce reunion">
+  <h2>La Reunion</h2>
+    <div class="matches-container">
+      <h2 class="details-title" id="matches-title">Résultats des matchs <span class="arrow">&#9660;</span></h2>
+      <div class="matches details" id="matches-details">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Match</th>
+              <th>Points</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10/04/2024</td>
+              <td>Match 1</td>
+              <td>10 - 5</td>
+              <td>3 - 2</td>
+            </tr>
+            <tr>
+              <td>15/04/2024</td>
+              <td>Match 2</td>
+              <td>12 - 8</td>
+              <td>4 - 1</td>
+            </tr>
+            <!-- Ajoutez d'autres lignes pour plus de matchs -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="calendar-container">
+      <h2 class="details-title" id="calendar-title">Calendrier des matchs à venir <span class="arrow">&#9660;</span></h2>
+      <div class="calendar details" id="calendar-details">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Match</th>
+              <th>Heure</th>
+              <th>Lieu</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>20/04/2024</td>
+              <td>Match 3</td>
+              <td>16:00</td>
+              <td>Salle de billard C</td>
+            </tr>
+            <tr>
+              <td>25/04/2024</td>
+              <td>Match 4</td>
+              <td>19:30</td>
+              <td>Salle de billard D</td>
+            </tr>
+            <!-- Ajoutez d'autres lignes pour plus de matchs à venir -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <div class="slider-container">
   <div class="slide active">
     <h2>Présentation des équipes</h2>
@@ -239,43 +313,79 @@ https://templatemo.com/tm-589-lugx-gaming
 
 
   <div class="ranking-container">
-    <h2>Classements</h2>
-    <div class="ranking-filter">
-      <label for="filter-select">Filtrer par :</label>
-      <select id="filter-select">
-        <option value="equipe">Équipe</option>
-        <option value="individuel">Individuel</option>
-      </select>
+     <div class="tabs">
+    <h1>Classement</h1>
+    <button class="tablink" onclick="openTab('Madagascar')">Madagascar</button>
+    <button class="tablink" onclick="openTab('reunion')">La reunion</button>
+</div>
+
+<div id="Madagascar" class="tabcontent">
+    
+    <div class="calendar-container">
+      <h2 class="details-title" id="calendar-title"> Madagascar <span class="arrow">&#9660;</span></h2>
+      <div class="calendar details" id="calendar-details">
+        <table>
+          <thead>
+            <tr>
+               <th>Classement</th>
+                <th>Tournoi/Championnat</th>
+                <th>Nom et Prenom</th>
+                <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <!-- Ajoutez d'autres lignes pour plus de matchs à venir -->
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div class="ranking-details">
-      <table>
-    <thead>
-      <tr>
-        <th>Position</th>
-        <th>Équipe / Joueur</th>
-        <th>Points</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>Équipe A</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Équipe B</td>
-        <td>90</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Équipe C</td>
-        <td>80</td>
-      </tr>
-      <!-- Ajoutez d'autres lignes pour plus de classements -->
-    </tbody>
-  </table>
+</div>
+
+<div id="reunion" class="tabcontent">
+    <div class="calendar-container">
+      <h2 class="details-title" id="calendar-title"> La Reunion <span class="arrow">&#9660;</span></h2>
+      <div class="calendar details" id="calendar-details">
+        <table>
+          <thead>
+            <tr>
+              <th>Classement</th>
+              <th>Tournoi/Championnat</th>
+              <th>Nom et Prenom</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <!-- Ajoutez d'autres lignes pour plus de matchs à venir -->
+          </tbody>
+        </table>
+      </div>
     </div>
+    
+</div>
   </div>
 
 
@@ -306,10 +416,12 @@ https://templatemo.com/tm-589-lugx-gaming
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/js/isotope.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/annonce.js"></script>
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
   <script src="assets/js/sponsor-banner.js"></script>
   <script src="assets/js/slider.js"></script>
+  <script src="assets/js/presentation.js"></script>
 
   </body>
 </html>
